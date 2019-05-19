@@ -114,43 +114,6 @@ inline void init() {
 	}
 	lastPosX = MyX;
 	lastPosY = MyY;
-
-	/*if (TryPickupFrame != frame - 1) {
-		ViewBack = 0;
-		lastAimValue = -Inf;
-	}*/
-	/*
-	for (int i = 0; i < 50; i++) {
-		if (CDlist[i]) {
-			CDlist[i]--;
-		}
-	}
-	*/
-	/*for (int X = 0; X < 10; X++) {
-		for (int Y = 0; Y < 10; Y++) {
-			AREA Area = MAP[X * 10 + Y];
-			for (int k = 0; k < AREA_DATA[Area].size(); k++) {
-				block tmp;
-				if (tmp.type == RECTANGLE) {
-					for (int i = tmp.x0; i < tmp.x1; i++) {
-						for (int j = tmp.y0; j < tmp.y1; j++) {
-
-							MapBlock[X * 100 + i][Y * 100 + j] = tmp;
-						}
-					}
-				}
-				else {
-					for (int i = -r; i <= r; i++) {
-						for (int j = -r; j < r; j++) {
-
-							MapBlock[X * 100 + i][Y * 100 + j] = tmp;
-						}
-					}
-				}
-
-			}
-		}
-	}*/
 }
 
 
@@ -687,29 +650,6 @@ void play_game()
 		MyY += D * sin(move_angle_now / 180 * pi);
 		TryAttack();
 	}
-
-
-	/*
-	if (!BShoot) {
-		if ((frame - SCOPE_change > 80) && (Dur[SCOPE_2] != 0) && (Dur[SNIPER_BARRETT] || Dur[SNIPER_RILFE]) && ViewRate == 1) {
-			shoot(SCOPE_2, 0);
-			SCOPE_change = frame;
-			ViewRate = 2;
-#ifdef Debug
-			fprintf(OUTPUT, "Shoot:%d SCOPE_2\n", SCOPE_2);
-#endif
-		}
-		
-
-		if ((frame - SCOPE_change > 80 || (Dur[SNIPER_BARRETT] == 0 && Dur[SNIPER_RILFE] == 0)) && ViewRate == 2) {
-			shoot(ITEM(-1), 0);
-			SCOPE_change = frame;
-			ViewRate = 1;
-#ifdef Debug
-			fprintf(OUTPUT, "Shoot:%d -1\n", SCOPE_2);
-#endif
-		}
-	}*/
 
 	return;
 }
